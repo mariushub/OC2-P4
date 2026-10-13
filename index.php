@@ -95,6 +95,16 @@ try {
             $bookController->deleteBook();
             break;
 
+        case 'messages':
+            $messageController = new MessageController();
+            $messageController->showMessages();
+            break;
+
+        case 'sendMessage':
+            $messageController = new MessageController();
+            $messageController->sendMessage();
+            break;
+
         default:
             throw new Exception("La page demandée n'existe pas.", 404);
     }
