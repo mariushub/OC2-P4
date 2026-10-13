@@ -1,0 +1,8 @@
+# Configuration locale (identifiants de la base de données) : on versionne seulement le modèle config/_config.php
+config/config.php
+
+# Documents fournis par OpenClassrooms (maquette exportée, spécifications) : inutiles dans le dépôt
+maquette/
+*.pdf
+
+AnticheatHK.txt
