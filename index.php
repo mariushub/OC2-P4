@@ -12,6 +12,22 @@ $action = Utils::request('action', 'home');
 try {
     // Pour chaque action, on appelle le bon contrôleur et la bonne méthode.
     switch ($action) {
+        // Pages accessibles à tous.
+        case 'home':
+            $homeController = new HomeController();
+            $homeController->showHome();
+            break;
+
+        case 'books':
+            $bookController = new BookController();
+            $bookController->showBooks();
+            break;
+
+        case 'book':
+            $bookController = new BookController();
+            $bookController->showBook();
+            break;
+
         default:
             throw new Exception("La page demandée n'existe pas.", 404);
     }
