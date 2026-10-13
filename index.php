@@ -28,6 +28,53 @@ try {
             $bookController->showBook();
             break;
 
+        case 'profile':
+            $userController = new UserController();
+            $userController->showProfile();
+            break;
+
+        // Inscription, connexion et déconnexion.
+        case 'registerForm':
+            $userController = new UserController();
+            $userController->showRegisterForm();
+            break;
+
+        case 'register':
+            $userController = new UserController();
+            $userController->register();
+            break;
+
+        case 'loginForm':
+            $userController = new UserController();
+            $userController->showLoginForm();
+            break;
+
+        case 'login':
+            $userController = new UserController();
+            $userController->login();
+            break;
+
+        case 'logout':
+            $userController = new UserController();
+            $userController->logout();
+            break;
+
+        // Pages réservées aux membres connectés (la vérification est faite dans chaque contrôleur).
+        case 'myAccount':
+            $userController = new UserController();
+            $userController->showMyAccount();
+            break;
+
+        case 'updateAccount':
+            $userController = new UserController();
+            $userController->updateAccount();
+            break;
+
+        case 'updateAvatar':
+            $userController = new UserController();
+            $userController->updateAvatar();
+            break;
+
         default:
             throw new Exception("La page demandée n'existe pas.", 404);
     }

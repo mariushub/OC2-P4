@@ -1,0 +1,5 @@
+# Ce dossier contient les images envoyées par les membres.
+# Par sécurité, on interdit l'exécution de tout script PHP qui s'y trouverait.
+<FilesMatch "\.(php|phtml|phar|php\d)$">
+    Require all denied
+</FilesMatch>
