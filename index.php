@@ -75,6 +75,26 @@ try {
             $userController->updateAvatar();
             break;
 
+        case 'addBookForm':
+            $bookController = new BookController();
+            $bookController->showAddBookForm();
+            break;
+
+        case 'editBookForm':
+            $bookController = new BookController();
+            $bookController->showEditBookForm();
+            break;
+
+        case 'saveBook':
+            $bookController = new BookController();
+            $bookController->saveBook();
+            break;
+
+        case 'deleteBook':
+            $bookController = new BookController();
+            $bookController->deleteBook();
+            break;
+
         default:
             throw new Exception("La page demandée n'existe pas.", 404);
     }
