@@ -19,4 +19,24 @@ class HomeController
         $view = new View('Accueil');
         $view->render('home', ['books' => $books]);
     }
+
+    /**
+     * Affiche la page des mentions légales.
+     * @return void
+     */
+    public function showLegal(): void
+    {
+        $view = new View('Mentions légales');
+        $view->render('legal');
+    }
+
+    /**
+     * Affiche la page de politique de confidentialité.
+     * @return void
+     */
+    public function showPrivacy(): void
+    {
+        $view = new View('Politique de confidentialité');
+        $view->render('privacy');
+    }
 }

@@ -33,6 +33,16 @@ try {
             $userController->showProfile();
             break;
 
+        case 'legal':
+            $homeController = new HomeController();
+            $homeController->showLegal();
+            break;
+
+        case 'privacy':
+            $homeController = new HomeController();
+            $homeController->showPrivacy();
+            break;
+
         // Inscription, connexion et déconnexion.
         case 'registerForm':
             $userController = new UserController();
